@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CafeKart</title>
+<style>
+body{margin:0;font-family:Arial;background:#f8f5ef;color:#333}
+header{background:#5b3020;color:white;padding:20px;text-align:center}
+nav{background:#3b2118;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:10px}
+.hero{text-align:center;padding:45px 15px;background:#f1dfc8}
+.hero h1{font-size:34px;color:#5b3020}
+button{background:#6b3825;color:white;border:0;padding:10px 18px;border-radius:6px}
+section{padding:20px}
+.products{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+.card{background:white;padding:18px;border-radius:10px;width:220px;text-align:center;box-shadow:0 2px 8px #ddd}
+footer{background:#3b2118;color:white;text-align:center;padding:18px}
+</style>
+</head>
+<body>
+
+<header>
+<h1> CafeKart </h1>
+<p>Your Favourite Cafe & Online Store</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#cafe">Cafe</a>
+<a href="#store">Online Store</a>
+</nav>
+
+<div class="hero" id="home">
+<h1>Welcome to CafeKart!</h1>
+<p>Delicious Food and Amazing Products</p>
+<button onclick="document.getElementById('cafe').scrollIntoView()">Explore Now</button>
+</div>
+
+<section id="cafe">
+<h2>Our Cafe Menu</h2>
+<div class="products">
+<div class="card">
+<h3>Cold Coffee</h3>
+<p>Price: ₹80</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+<div class="card">
+<h3>Pizza</h3>
+<p>Price: ₹120</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+<div class="card">
+<h3>Burger</h3>
+<p>Price: ₹60</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+</div>
+</section>
+
+<section id="store">
+<h2>Online Products</h2>
+<div class="products">
+<div class="card">
+<h3>Smart Watch</h3>
+<p>Price: ₹499</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+<div class="card">
+<h3>Headphones</h3>
+<p>Price: ₹299</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 CafeKart | Thank You for Visiting!</p>
+<p>Your Cafe, Your Store</p>
+</footer>
+
+<script>
+let cart = 0;
+function addCart(){
+cart++;
+alert("Product added! Cart items: " + cart);
+}
+</script>
+
+</body>
+</html>
